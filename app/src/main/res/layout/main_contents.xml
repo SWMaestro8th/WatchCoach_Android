@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ground"
+        android:layout_width="1300px"
+        android:layout_height="735px"
+        android:layout_alignStart="@+id/markArea"
+        android:layout_below="@+id/markArea"
+        android:layout_marginTop="30px"
+        app:srcCompat="@color/colorPrimaryDark" />
+
+    <RelativeLayout
+        android:id="@+id/BookMark"
+        android:layout_width="1015px"
+        android:layout_height="290px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="18dp"
+        android:layout_toStartOf="@+id/Recommand">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Recommand"
+        android:layout_width="500px"
+        android:layout_height="350px"
+        android:layout_alignBottom="@+id/BookMark"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="14dp">
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/time3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/BookMark"
+        android:layout_alignTop="@+id/Recommand"
+        android:text="00:00 / 00:00 " />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="600px"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/time3"
+        android:layout_toStartOf="@+id/time3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/seekBar2"
+        android:layout_toStartOf="@+id/seekBar2"
+        android:text="00:00" />
+
+    <Button
+        android:id="@+id/markArea"
+        android:layout_width="262px"
+        android:layout_height="98px"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/BookMark"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="32dp"
+        android:text="마크범위 표시" />
+
+    <Button
+        android:id="@+id/defenceArea"
+        android:layout_width="262px"
+        android:layout_height="98px"
+        android:layout_alignTop="@+id/markArea"
+        android:layout_marginLeft="-10px"
+        android:layout_toEndOf="@+id/markArea"
+        android:text="수비범위 표시" />
+
+    <Button
+        android:id="@+id/formation"
+        android:layout_width="262px"
+        android:layout_height="98px"
+        android:layout_alignTop="@+id/defenceArea"
+        android:layout_marginLeft="-10px"
+        android:layout_toEndOf="@+id/defenceArea"
+        android:text="포메이션 표시" />
+
+    <Button
+        android:id="@+id/smartDraw"
+        android:layout_width="262px"
+        android:layout_height="98px"
+        android:layout_alignTop="@+id/formation"
+        android:layout_marginLeft="-10px"
+        android:layout_toEndOf="@+id/formation"
+        android:text="스마트 전술판" />
+
+</RelativeLayout>

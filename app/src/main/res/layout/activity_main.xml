@@ -31,30 +31,6 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true">
 
-            <android.support.design.widget.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Live" />
-
-            <android.support.design.widget.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="전술" />
-
-            <android.support.design.widget.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="통계" />
-
-            <android.support.design.widget.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="히스토리" />
-
-            <android.support.design.widget.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="설정" />
         </android.support.design.widget.TabLayout>
 
         <Spinner
@@ -84,7 +60,7 @@
     <RelativeLayout
         android:id="@+id/RightBar"
         android:layout_width="440px"
-        android:layout_height="1426px"
+        android:layout_height="1314px"
         app:layout_constraintTop_toBottomOf="@+id/Logo"
         tools:layout_editor_absoluteX="0dp">
 
@@ -92,9 +68,9 @@
             android:id="@+id/TeamLogo"
             android:layout_width="440px"
             android:layout_height="440px"
-            android:layout_marginTop="45px"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:layout_marginTop="45px"
             app:srcCompat="@android:color/transparent" />
 
         <TextView
@@ -133,11 +109,11 @@
             android:layout_alignBottom="@+id/Team2Logo"
             android:layout_marginBottom="30px"
             android:layout_toEndOf="@+id/Team1Logo"
+            android:gravity="center"
             android:text="VS"
             android:textAlignment="center"
-            android:gravity="center"
             android:textSize="50px"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <ListView
             android:layout_width="440px"
@@ -148,105 +124,13 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/Contents"
-        android:layout_width="1608px"
-        android:layout_height="1462px"
+    <view
+        android:id="@+id/contentsView"
+        class="android.support.v4.view.ViewPager"
+        id="@+id/view"
+        android:layout_width="1607px"
+        android:layout_height="1314px"
         app:layout_constraintStart_toEndOf="@+id/RightBar"
-        app:layout_constraintTop_toBottomOf="@+id/TopBar">
-
-        <RelativeLayout
-            android:id="@+id/BookMark"
-            android:layout_width="1015px"
-            android:layout_height="290px"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="100dp"
-            android:layout_marginLeft="35px">
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/Recommand"
-            android:layout_width="500px"
-            android:layout_height="350px"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginBottom="100dp"
-            android:layout_marginEnd="35px">
-
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/Time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/BookMark"
-            android:layout_alignTop="@+id/Recommand"
-            android:text="00:00 / 00:00 " />
-
-        <SeekBar
-            android:id="@+id/seekBar4"
-            android:layout_width="600px"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/Time"
-            android:layout_marginEnd="24dp"
-            android:layout_toStartOf="@+id/Time" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/seekBar4"
-            android:layout_toStartOf="@+id/seekBar4"
-            android:text="00:00" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="262px"
-            android:layout_height="98px"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/BookMark"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="70px"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="262px"
-            android:layout_height="98px"
-            android:layout_alignTop="@+id/button"
-            android:layout_toEndOf="@+id/button"
-            android:layout_marginLeft="-10px"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="262px"
-            android:layout_height="98px"
-            android:layout_alignTop="@+id/button2"
-            android:layout_toEndOf="@+id/button2"
-            android:layout_marginLeft="-10px"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="262px"
-            android:layout_height="98px"
-            android:layout_alignTop="@+id/button3"
-            android:layout_toEndOf="@+id/button3"
-            android:layout_marginLeft="-10px"
-            android:text="Button" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="1230px"
-            android:layout_height="735px"
-            android:layout_alignStart="@+id/button"
-            android:layout_below="@+id/button"
-            android:layout_marginTop="22dp"
-            app:srcCompat="@color/colorPrimaryDark" />
-
-
-    </RelativeLayout>
+        app:layout_constraintTop_toBottomOf="@+id/TopBar" />
 
 </android.support.constraint.ConstraintLayout>
